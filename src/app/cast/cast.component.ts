@@ -16,7 +16,7 @@ export class CastComponent {
   typeToMembers: Map<string, Person[]> = new Map<string, Person[]>();
 
     constructor() {
-      this.typeToMembers.set("Creators", [
+      this.typeToMembers.set("Executive Team", [
           {firstName: "Alan", lastName: "Blake", roles: ["Writer"], image: ""},
           {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Co-Producer"], image: ""},
           {firstName: "Emmy", lastName: "Mastellar", roles: ["Co-Producer"], image: ""},
@@ -37,14 +37,6 @@ export class CastComponent {
           {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: ""},
           {firstName: "Cotton", lastName: "Hensley", roles: ["Photography"], image: ""},
       ])
-    }
-
-    getCast(): Person[] | undefined {
-      return this.typeToMembers.get("Cast")
-    }
-
-    getCrew(): Person[] | undefined {
-      return this.typeToMembers.get("Crew")
     }
 
     returnZero() {

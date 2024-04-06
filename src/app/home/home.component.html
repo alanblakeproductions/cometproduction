@@ -1,17 +1,10 @@
-<div class="uk-section" style="background: black">
-  <div class="uk-flex uk-flex-center uk-inline1">
-    <img src="assets/images/comet.png" />
-
-    <!--
-    <div class="uk-section">
-      <div class="uk-container">
-        <div class="uk-overlay uk-light uk-position-bottom">
-          <h1 class="uk-heading-large">Comexxxxxxxt</h1>
-          <p>Showing at Chicago Dramatists theater June 6-28, 2024</p>
-        </div>
-      </div>
+<div style="background: black">
+  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-background-fixed" data-src="https://picsum.photos/id/120/1200/800" uk-img>
+    <div class="">
+      <h1 class="uk-heading-large uk-margin-remove">COMET</h1>
+      <p class="uk-text-lead uk-margin-remove">A One-Act Play</p>
+      <p class="uk-text-meta uk-margin-bottom">Now playing as part of Rhinofest 2024</p>
     </div>
-    -->
   </div>
 </div>
 
@@ -35,7 +28,7 @@
               {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
             </p>
 
-            <p *ngFor="let showtime of showrun.showtimes">
+            <p class="uk-text" *ngFor="let showtime of showrun.showtimes">
               {{showtime.date | date: 'EEEE, MMM d, y'}} at {{showtime.time}}
             </p>
           </article>
