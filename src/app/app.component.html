@@ -1,92 +1,30 @@
-<div class="uk-position-relative" style="background: black">
-  <div class="uk-flex uk-flex-center uk-inline">
-    <img src="assets/images/comet.png" />
+<div class="uk-position-top">
+  <nav class="uk-navbar-container" uk-navbar-transparent1>
+    <div class="uk-container">
+      <div uk-navbar>
+        <div class="uk-navbar-left">
+          <a class="uk-navbar-item uk-logo" routerLink="home" routerLinkActive="active">COMET</a>
+        </div>
+        <div class="uk-navbar-right">
+          <a class="uk-hidden@s uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
+          <div class="uk-hidden@s uk-navbar-dropdown">
+            <ul class="uk-nav uk-navbar-dropdown-nav">
+              <li><a routerLink="about" routerLinkActive="uk-active">About</a></li>
+              <li><a routerLink="cast" routerLinkActive="uk-active">Cast & Creative</a></li>
+              <li><a routerLink="tickets" routerLinkActive="uk-active">Tickets</a></li>
+            </ul>
+          </div>
 
-    <div class="uk-section">
-      <div class="uk-container">
-        <div class="uk-overlay uk-light uk-position-bottom">
-          <h1 class="uk-heading-large">Comexxxxxxxt</h1>
-          <p>Showing at Chicago Dramatists theater June 6-28, 2024</p>
+          <ul class="uk-visible@s uk-navbar-nav">
+            <li><a routerLink="about" routerLinkActive="uk-active">About</a></li>
+            <li><a routerLink="cast" routerLinkActive="uk-active">Cast & Creative</a></li>
+            <li><a routerLink="tickets" routerLinkActive="uk-active">Tickets</a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="uk-position-top">
-    <nav class="uk-navbar-container" uk-navbar-transparent>
-      <div class="uk-container">
-        <div uk-navbar>
-          <div class="uk-navbar-right">
-            <a class="uk-hidden@s uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon href="#"></a>
-            <div class="uk-hidden@s uk-navbar-dropdown">
-              <ul class="uk-nav uk-navbar-dropdown-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li><a href="#">Item</a></li>
-                <li><a href="#">Item</a></li>
-              </ul>
-            </div>
-
-            <ul class="uk-visible@s uk-navbar-nav">
-              <li class="">Tickets</li>
-              <li class="">Cast and Creative</li>
-              <li class="">Productions</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-
-  <!--
-  <div class="uk-position-top">
-    <nav class="uk-navbar-container uk-navbar-transparent">
-      <div class="uk-container">
-        <div uk-navbar>
-          <div class="uk-navbar-right">
-            <ul class="uk-navbar-nav">
-              <li class="">Tickets</li>
-              <li class="">Cast and Creative</li>
-              <li class="">Productions</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  -->
+  </nav>
 </div>
 
-<div class="uk-section">
-  <div id="tickets">
+<router-outlet></router-outlet>
 
-  </div>
-  <div id="" class="uk-container">
-    <div *ngFor="let entry of typeToMembers | keyvalue">
-      <div class="uk-grid">
-        <h3 class="uk-heading-small">{{entry.key}}</h3>
-      </div>
-
-      <div class="uk-grid-small" uk-grid *ngFor="let member of entry.value">
-        <div class="uk-width-expand" uk-leader="fill: .">{{member.roles}}</div>
-        <div>{{member.firstName}} {{member.lastName}}</div>
-      </div>
-
-      <!--
-      <div class="uk-grid">
-        <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid *ngFor="let member of entry.value">
-          <div class="uk-card-media-left uk-cover-container">
-            <img src="assets/images/comet.png" uk-cover/>
-            <canvas width="400" height="400"></canvas>
-          </div>
-          <div>
-            <div class="uk-card-body">
-              <h3 class="uk-card-title">{{member.firstName}} {{member.lastName}}</h3>
-              <p>{{member.roles}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      -->
-    </div>
-  </div>
-</div>

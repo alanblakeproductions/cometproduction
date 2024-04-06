@@ -1,0 +1,46 @@
+<div class="uk-section" style="background: black">
+  <div class="uk-flex uk-flex-center uk-inline1">
+    <img src="assets/images/comet.png" />
+
+    <!--
+    <div class="uk-section">
+      <div class="uk-container">
+        <div class="uk-overlay uk-light uk-position-bottom">
+          <h1 class="uk-heading-large">Comexxxxxxxt</h1>
+          <p>Showing at Chicago Dramatists theater June 6-28, 2024</p>
+        </div>
+      </div>
+    </div>
+    -->
+  </div>
+</div>
+
+<div class="uk-section">
+  <div class="uk-container">
+    <h2 class="uk-heading">Showtimes</h2>
+
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid *ngFor="let showrun of SHOWRUNS">
+      <div class="uk-card-media-left uk-cover-container">
+        <img src="images/light.jpg" alt="" uk-cover>
+        <canvas width="600" height="400"></canvas>
+      </div>
+      <div>
+        <div class="uk-card-body">
+          <article class="uk-article">
+            <h4 class="uk-article-title">{{showrun.address.name}}</h4>
+            <p class="uk-article-meta" *ngIf="showrun.address.line2">
+              {{showrun.address.line1}} {{showrun.address.line2}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+            </p>
+            <p class="uk-article-meta" *ngIf="!showrun.address.line2">
+              {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+            </p>
+
+            <p *ngFor="let showtime of showrun.showtimes">
+              {{showtime.date | date: 'EEEE, MMM d, y'}} at {{showtime.time}}
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
