@@ -20,6 +20,7 @@ export class HomeComponent {
     city: "Chicago",
     state: "IL",
     zip: "60642",
+    image: "assets/images/map_chicago_dramatists.png",
     link: "https://www.google.com/maps/place/Chicago+Dramatists/@41.8960466,-87.6556394,15z/data=!4m6!3m5!1s0x880e2dc9d0c6865b:0xe5ff95ab9b80ec42!8m2!3d41.8960466!4d-87.6556394!16s%2Fg%2F11l35pgz_m?entry=ttu",
   };
 

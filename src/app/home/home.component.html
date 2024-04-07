@@ -1,10 +1,8 @@
-<div style="background: black">
-  <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-background-fixed" data-src="https://picsum.photos/id/120/1200/800" uk-img>
-    <div class="">
-      <h1 class="uk-heading-large uk-margin-remove">COMET</h1>
-      <p class="uk-text-lead uk-margin-remove">A One-Act Play</p>
-      <p class="uk-text-meta uk-margin-bottom">Now playing as part of Rhinofest 2024</p>
-    </div>
+<div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex" style="background-image: url('https://picsum.photos/id/120/1200/800');">
+  <div class="uk-width-1-1 uk-width-1-2@s uk-text-center uk-text-left@s uk-margin-auto uk-margin-auto-vertical">
+    <h1 class="uk-heading-medium uk-margin-remove">Comet</h1>
+    <p class="uk-text-lead uk-margin-remove">A One-Act Play</p>
+    <p class="uk-text-meta">Now playing as part of Rhinofest 2024</p>
   </div>
 </div>
 
@@ -14,24 +12,32 @@
 
     <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid *ngFor="let showrun of SHOWRUNS">
       <div class="uk-card-media-left uk-cover-container">
-        <img src="images/light.jpg" alt="" uk-cover>
-        <canvas width="600" height="400"></canvas>
+        <a href="{{showrun.address.link}}" target="_blank">
+          <img src="{{showrun.address.image}}" alt="{{showrun.address.name}}" uk-cover>
+        </a>
+        <canvas width="600" height="200"></canvas>
       </div>
       <div>
         <div class="uk-card-body">
-          <article class="uk-article">
-            <h4 class="uk-article-title">{{showrun.address.name}}</h4>
-            <p class="uk-article-meta" *ngIf="showrun.address.line2">
-              {{showrun.address.line1}} {{showrun.address.line2}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
-            </p>
-            <p class="uk-article-meta" *ngIf="!showrun.address.line2">
-              {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
-            </p>
+          <h3 class="uk-card-title uk-margin-remove-bottom">{{showrun.address.name}}</h3>
+          <p class="uk-text-meta uk-margin-remove-top" *ngIf="showrun.address.line2">
+            {{showrun.address.line1}} {{showrun.address.line2}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+          </p>
 
-            <p class="uk-text" *ngFor="let showtime of showrun.showtimes">
-              {{showtime.date | date: 'EEEE, MMM d, y'}} at {{showtime.time}}
-            </p>
-          </article>
+          <p class="uk-text-meta" *ngIf="!showrun.address.line2">
+            {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+          </p>
+
+          <button class="uk-button uk-button-primary" type="button">Showtimes</button>
+          <div uk-dropdown="animation: reveal-top; animation-out: true; delay-hide: 100">
+            <ul class="uk-nav uk-dropdown-nav">
+              <li *ngFor="let showtime of showrun.showtimes">
+                <a href="{{showrun.ticketLink}}">
+                  {{showtime.date | date: 'EEE, MMM d'}} at {{showtime.time}}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
