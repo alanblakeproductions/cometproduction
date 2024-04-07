@@ -2,13 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
-## Development server
+## Development 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+# In terminal 1, start the server
+ng serve --open --watch
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# In terminal 2, start LESS compilation
+cd src/assets/uikit
+pnpm install
+pnpm compile
+pnpm watch
+```
 
 ## Build
 
