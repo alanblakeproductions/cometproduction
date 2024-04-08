@@ -17,4 +17,17 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class AppComponent {
 
+  copyrightYears: string;
+
+  constructor() {
+    let startYear = 2024;
+    let currentYear = new Date().getFullYear();
+
+    if (startYear == currentYear) {
+      this.copyrightYears = "" + startYear;
+    }
+    else {
+      this.copyrightYears = startYear + "-" + currentYear;
+    }
+  }
 }
