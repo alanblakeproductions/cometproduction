@@ -1,12 +1,21 @@
 <div class="uk-section uk-margin-top">
   <div class="uk-container">
     <div *ngFor="let entry of typeToMembers | keyvalue: returnZero">
-      <div class="uk-grid uk-margin-top">
+      <div class="uk-grid uk-margin-top uk-margin-bottom">
         <h2 class="uk-heading">{{entry.key}}</h2>
       </div>
 
+      <!-- Visible on MOBILE -->
       <ng-container *ngFor="let member of entry.value">
-        <div class="uk-grid-small" uk-grid *ngFor="let role of member.roles">
+        <dl class="uk-hidden@365 uk-description-list uk-description-list-divider">
+          <dt>{{member.firstName}} {{member.lastName}}</dt>
+          <dd *ngFor="let role of member.roles">{{role}}</dd>
+        </dl>
+      </ng-container>
+
+      <!-- Visible on DESKTOP -->
+      <ng-container *ngFor="let member of entry.value">
+        <div class="uk-visible@365 uk-grid-small" uk-grid *ngFor="let role of member.roles">
           <div class="uk-width-expand" uk-leader="fill: .">{{role}}</div>
           <div>{{member.firstName}} {{member.lastName}}</div>
         </div>
