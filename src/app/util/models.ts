@@ -17,9 +17,11 @@ export interface Person {
 }
 
 export interface Showrun {
+  title: string,
   address: Address,
   ticketLink: string,
   showtimes: Showtime[],
+  description: string,
 }
 
 export interface Showtime {

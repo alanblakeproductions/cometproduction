@@ -10,34 +10,56 @@
   <div class="uk-container">
     <h2 class="uk-heading">Showtimes</h2>
 
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid *ngFor="let showrun of SHOWRUNS">
+    <div class="uk-card uk-card-default uk-grid uk-child-width-1-2@m" uk-grid *ngFor="let showrun of SHOWRUNS">
       <div class="uk-card-media-left uk-cover-container">
-        <a href="{{showrun.address.link}}" target="_blank">
+        <a href="{{showrun.ticketLink}}" target="_blank">
           <img src="{{showrun.address.image}}" alt="{{showrun.address.name}}" uk-cover>
         </a>
-        <canvas width="600" height="200"></canvas>
+        <canvas width="600" height="600"></canvas>
       </div>
       <div>
         <div class="uk-card-body">
-          <h3 class="uk-card-title uk-margin-remove-bottom">{{showrun.address.name}}</h3>
+          <h3 class="uk-card-title uk-margin-remove-bottom">{{showrun.title}} at {{showrun.address.name}}</h3>
           <p class="uk-text-meta uk-margin-remove-top" *ngIf="showrun.address.line2">
-            {{showrun.address.line1}} {{showrun.address.line2}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+            <a href="{{showrun.address.link}}" title="{{showrun.address.name}}" target="_blank">
+              {{showrun.address.line1}} {{showrun.address.line2}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+            </a>
           </p>
 
-          <p class="uk-text-meta" *ngIf="!showrun.address.line2">
-            {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+          <p class="uk-text-meta uk-margin-remove-top" *ngIf="!showrun.address.line2">
+            <a href="{{showrun.address.link}}" title="{{showrun.address.name}}" target="_blank">
+              {{showrun.address.line1}}, {{showrun.address.city}}, {{showrun.address.state}} {{showrun.address.zip}}
+            </a>
           </p>
 
-          <button class="uk-button uk-button-primary" type="button">Tickets</button>
-          <div uk-dropdown="animation: reveal-top; animation-out: true; delay-hide: 100">
-            <ul class="uk-nav uk-dropdown-nav">
-              <li *ngFor="let showtime of showrun.showtimes">
-                <a href="{{showrun.ticketLink}}">
-                  {{showtime.date | date: 'EEE, MMM d'}} at {{showtime.time}}
-                </a>
-              </li>
-            </ul>
-          </div>
+          <p class="uk-text">{{showrun.description}}</p>
+
+          <div *ngIf="showrun.ticketLink; then ticketsOpen; else ticketsClosed"></div>
+          <ng-template #ticketsOpen>
+            <div *ngIf="showrun.showtimes.length == 1; then singleShowtime; else multipleShowtimes"></div>
+            <ng-template #singleShowtime>
+              <a class="uk-button uk-button-primary" type="button" href="{{showrun.ticketLink}}" target="_blank">
+                Tickets
+              </a>
+            </ng-template>
+            <ng-template #multipleShowtimes>
+              <button class="uk-button uk-button-primary" type="button">Tickets</button>
+              <div uk-dropdown="animation: reveal-top; animation-out: true; delay-hide: 100">
+                <ul class="uk-nav uk-dropdown-nav">
+                  <li *ngFor="let showtime of showrun.showtimes">
+                    <a href="{{showrun.ticketLink}}" target="_blank">
+                      {{showtime.date | date: 'EEE, MMM d'}} at {{showtime.time}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </ng-template>
+          </ng-template>
+          <ng-template #ticketsClosed>
+            <button class="uk-button uk-button-primary" disabled type="button">
+              Tickets Coming Soon
+            </button>
+          </ng-template>
         </div>
       </div>
     </div>

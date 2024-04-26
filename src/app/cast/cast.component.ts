@@ -27,15 +27,16 @@ export class CastComponent {
           {firstName: "Jen", lastName: "Matthews", roles: ["Ruth Moran"], image: ""},
           {firstName: "Alkan", lastName: "Sezginis", roles: ["Ramzi Dawoud"], image: ""},
           {firstName: "Zoë", lastName: "Deprez", roles: ["Celine Meunier"], image: ""},
-          {firstName: "Charlie", lastName: "Thompson", roles: ["Michael Matz"], image: ""},
+          {firstName: "Charlie", lastName: "Thomson", roles: ["Michael Matz"], image: ""},
           {firstName: "Mo", lastName: "Reiley", roles: ["Marcus Finley"], image: ""},
           {firstName: "Kendal", lastName: "Romero", roles: ["Lena Hargrave"], image: ""},
       ])
 
       this.typeToMembers.set("Crew", [
           {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: ""},
-          {firstName: "Cotton", lastName: "Hensley", roles: ["Photography"], image: ""},
-          {firstName: "Charlie", lastName: "Thompson", roles: ["Graphic Design"], image: ""},
+          {firstName: "Emmy", lastName: "Mastellar", roles: ["Photography"], image: ""},
+          {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: ""},
+          {firstName: "Alan", lastName: "Blake", roles: ["Set Construction"], image: ""},
       ])
     }
 
