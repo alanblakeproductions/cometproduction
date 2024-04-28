@@ -24,11 +24,11 @@ export class CastComponent {
 
       this.typeToMembers.set("Cast", [
           {firstName: "Mary Cait", lastName: "Walthall", roles: ["Anne Hargrave"], image: ""},
-          {firstName: "Jen", lastName: "Matthews", roles: ["Ruth Moran"], image: ""},
+          {firstName: "Jennifer", lastName: "Mathews", roles: ["Ruth Moran"], image: ""},
           {firstName: "Alkan", lastName: "Sezginis", roles: ["Ramzi Dawoud"], image: ""},
-          {firstName: "Zoë", lastName: "Deprez", roles: ["Celine Meunier"], image: ""},
+          {firstName: "Zoe", lastName: "Deprez", roles: ["Celine Meunier"], image: ""},
           {firstName: "Charlie", lastName: "Thomson", roles: ["Michael Matz"], image: ""},
-          {firstName: "Mo", lastName: "Reiley", roles: ["Marcus Finley"], image: ""},
+          {firstName: "Mo", lastName: "Reilly", roles: ["Marcus Finley"], image: ""},
           {firstName: "Kendal", lastName: "Romero", roles: ["Lena Hargrave"], image: ""},
       ])
 
