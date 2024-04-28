@@ -25,7 +25,7 @@
       </ng-container>
       -->
 
-      <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-text-center" uk-grid>
+      <div class="uk-grid uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-text-center" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-border-circle">
         <div class="uk-margin" *ngFor="let member of entry.value">
           <img class="uk-border-circle" src="{{member.image}}" width="300" height="300" alt="{{member.firstName}} {{member.lastName}}"/>
           <h3 class="uk-heading uk-margin-remove-bottom">{{member.firstName}} {{member.lastName}}</h3>
