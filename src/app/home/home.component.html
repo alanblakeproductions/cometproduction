@@ -8,16 +8,16 @@
 
 <div class="uk-section">
   <div class="uk-container">
-    <h2 class="uk-heading">Showtimes</h2>
+    <h2 class="uk-heading">Events</h2>
 
-    <div class="uk-card uk-card-default uk-grid uk-child-width-1-2@m" uk-grid *ngFor="let showrun of SHOWRUNS">
-      <div class="uk-card-media-left uk-cover-container">
+    <div class="uk-card uk-card-default uk-grid" uk-grid *ngFor="let showrun of SHOWRUNS">
+      <div class="uk-card-media-left uk-cover-container uk-width-2-5@s">
         <a href="{{showrun.ticketLink}}" target="_blank">
           <img src="{{showrun.address.image}}" alt="{{showrun.address.name}}" uk-cover>
         </a>
         <canvas width="600" height="600"></canvas>
       </div>
-      <div>
+      <div class="uk-width-3-5@s">
         <div class="uk-card-body">
           <h3 class="uk-card-title uk-margin-remove-bottom">{{showrun.title}} at {{showrun.address.name}}</h3>
           <p class="uk-text-meta uk-margin-remove-top" *ngIf="showrun.address.line2">

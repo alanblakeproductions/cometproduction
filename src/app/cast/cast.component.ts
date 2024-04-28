@@ -17,26 +17,26 @@ export class CastComponent {
 
     constructor() {
       this.typeToMembers.set("Executive Team", [
-          {firstName: "Alan", lastName: "Blake", roles: ["Writer"], image: ""},
-          {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Co-Producer"], image: ""},
-          {firstName: "Emmy", lastName: "Mastellar", roles: ["Co-Producer"], image: ""},
+          {firstName: "Alan", lastName: "Blake", roles: ["Writer"], image: "assets/images/alan_blake.jpg"},
+          {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Co-Producer"], image: "assets/images/alek_sayers.jpg"},
+          {firstName: "Emmy", lastName: "Mastellar", roles: ["Co-Producer"], image: "assets/images/emmy_mastellar.jpg"},
       ])
 
       this.typeToMembers.set("Cast", [
-          {firstName: "Mary Cait", lastName: "Walthall", roles: ["Anne Hargrave"], image: ""},
-          {firstName: "Jennifer", lastName: "Mathews", roles: ["Ruth Moran"], image: ""},
-          {firstName: "Alkan", lastName: "Sezginis", roles: ["Ramzi Dawoud"], image: ""},
-          {firstName: "Zoe", lastName: "Deprez", roles: ["Celine Meunier"], image: ""},
-          {firstName: "Charlie", lastName: "Thomson", roles: ["Michael Matz"], image: ""},
-          {firstName: "Mo", lastName: "Reilly", roles: ["Marcus Finley"], image: ""},
-          {firstName: "Kendal", lastName: "Romero", roles: ["Lena Hargrave"], image: ""},
+          {firstName: "Mary Cait", lastName: "Walthall", roles: ["Anne Hargrave"], image: "assets/images/mary_cait_walthall.jpg"},
+          {firstName: "Jennifer", lastName: "Mathews", roles: ["Ruth Moran"], image: "assets/images/jennifer_mathews.jpg"},
+          {firstName: "Alkan", lastName: "Sezginis", roles: ["Ramzi Dawoud"], image: "assets/images/alkan_sezginis.jpg"},
+          {firstName: "Zoe", lastName: "Deprez", roles: ["Celine Meunier"], image: "assets/images/zoe_deprez.jpg"},
+          {firstName: "Charlie", lastName: "Thomson", roles: ["Michael Matz"], image: "assets/images/charlie_thomson.jpg"},
+          {firstName: "Mo", lastName: "Reilly", roles: ["Marcus Finley"], image: "assets/images/mo_reilly.jpg"},
+          {firstName: "Kendal", lastName: "Romero", roles: ["Lena Hargrave"], image: "assets/images/kendal_romero.jpg"},
       ])
 
       this.typeToMembers.set("Crew", [
-          {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: ""},
-          {firstName: "Emmy", lastName: "Mastellar", roles: ["Photography"], image: ""},
-          {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: ""},
-          {firstName: "Alan", lastName: "Blake", roles: ["Set Construction"], image: ""},
+          {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: "https://placehold.co/400x400"},
+          {firstName: "Emmy", lastName: "Mastellar", roles: ["Photography"], image: "assets/images/emmy_mastellar.jpg"},
+          {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: "assets/images/charlie_thomson.jpg"},
+          {firstName: "Alan", lastName: "Blake", roles: ["Set Construction"], image: "assets/images/alan_blake.jpg"},
       ])
     }
 
