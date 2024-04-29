@@ -19,7 +19,7 @@ export class CastComponent {
       this.typeToMembers.set("Executive Team", [
           {firstName: "Alan", lastName: "Blake", roles: ["Writer"], image: "assets/images/alan_blake.jpg"},
           {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Co-Producer"], image: "assets/images/alek_sayers.jpg"},
-          {firstName: "Emmy", lastName: "Mastellar", roles: ["Co-Producer"], image: "assets/images/emmy_mastellar.jpg"},
+          {firstName: "Emmy", lastName: "Masteller", roles: ["Co-Producer"], image: "assets/images/emmy_masteller.jpg"},
       ])
 
       this.typeToMembers.set("Cast", [
