@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './about.component.less'
 })
 export class AboutComponent {
+
+    constructor() {
+    }
 }

@@ -13,7 +13,7 @@ import { Address, Person, Showtime } from './../util/models'
 })
 export class CastComponent {
 
-  typeToMembers: Map<string, Person[]> = new Map<string, Person[]>();
+    typeToMembers: Map<string, Person[]> = new Map<string, Person[]>();
 
     constructor() {
       this.typeToMembers.set("Executive Team", [
