@@ -34,7 +34,7 @@ export class CastComponent {
 
       this.typeToMembers.set("Crew", [
           {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: "https://placehold.co/400x400"},
-          {firstName: "Emmy", lastName: "Mastellar", roles: ["Photography"], image: "assets/images/emmy_mastellar.jpg"},
+          {firstName: "Emmy", lastName: "Masteller", roles: ["Photography"], image: "assets/images/emmy_masteller.jpg"},
           {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: "assets/images/charlie_thomson.jpg"},
           {firstName: "Alan", lastName: "Blake", roles: ["Set Construction"], image: "assets/images/alan_blake.jpg"},
       ])
