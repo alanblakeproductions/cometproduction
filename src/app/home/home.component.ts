@@ -20,7 +20,7 @@ export class HomeComponent {
     city: "Chicago",
     state: "IL",
     zip: "60613",
-    image: "assets/images/bughouse_fundraiser_5-5-2024.jpg",
+    image: "assets/images/bughouse_fundraiser_5-5-2024.png",
     link: "https://maps.app.goo.gl/rbR8cCb4U8dHuHLq5",
   };
 
@@ -37,7 +37,7 @@ export class HomeComponent {
 
   SHOWRUNS: Showrun[] = [
     {
-      title: "Comet Approaching! Fundraiser",
+      title: "A Night of Stars! Fundraiser",
       address: this.BUGHOUSE_ADDRESS,
       ticketLink: 'https://bughousetheater.fourthwalltickets.com/shows/a-night-of-stars?date=2024-05-05T19:00:00',
       showtimes: [
