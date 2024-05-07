@@ -36,6 +36,7 @@ export class HomeComponent {
   };
 
   SHOWRUNS: Showrun[] = [
+  /*
     {
       title: "A Night of Stars! Fundraiser",
       address: this.BUGHOUSE_ADDRESS,
@@ -46,6 +47,7 @@ export class HomeComponent {
       description: "A variety show that is out of this world! Come for one night only to see some of Chicago's best "
         + "music and comedy. 100% of proceeds from this event will go to support the cast.",
     },
+    */
     {
       title: "Rhinofest 2024",
       address: this.CHICAGO_DRAMATISTS_ADDRESS,
