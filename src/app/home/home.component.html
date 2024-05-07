@@ -3,13 +3,22 @@
   <div class="uk-width-1-1 uk-width-1-2@s uk-text-center uk-margin-auto uk-margin-auto-vertical">
     <h1 class="title uk-heading-large uk-margin-remove">COMET</h1>
     <p class="uk-text-lead uk-margin-remove">A One-Act Play</p>
-
-    <a class="uk-button uk-button-large uk-button-support uk-margin-large-top" href="https://go.rallyup.com/cometproduction2024/Campaign/Details" target="_blank">Support Us!</a>
   </div>
 </div>
 
 <div class="uk-section">
   <div class="uk-container">
+    <div class="uk-flex uk-flex-center">
+      <button class="uk-button uk-button-large uk-width-1-1 support">Support Us!</button>
+    </div>
+
+    <progress class="uk-progress" value="{{FUNDRAISING_CURRENT}}" max="{{FUNDRAISING_GOAL}}"></progress>
+
+    <p class="uk-text">
+      We've already reached <span class="uk-text-large">{{FUNDRAISING_CURRENT_PERCENT}}%</span> of our
+      <span class="uk-text-large">${{FUNDRAISING_GOAL}}</span> goal!
+    </p>
+
     <h2 class="uk-heading">Events</h2>
 
     <div class="uk-card uk-card-default uk-grid" uk-grid *ngFor="let showrun of SHOWRUNS">
