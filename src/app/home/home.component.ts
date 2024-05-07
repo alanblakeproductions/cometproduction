@@ -15,7 +15,7 @@ export class HomeComponent {
 
   FUNDRAISING_CURRENT: number = 614;
   FUNDRAISING_GOAL: number = 2000;
-  FUNDRAISING_CURRENT_PERCENT: number = Math.round(100 * this.FUNDRAISING_CURRENT / this.FUNDRAISING_GOAL);
+  FUNDRAISING_CURRENT_PERCENT: number = Math.floor(100 * this.FUNDRAISING_CURRENT / this.FUNDRAISING_GOAL);
 
   BUGHOUSE_ADDRESS: Address = {
     name: 'Bughouse Theater',
