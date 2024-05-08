@@ -55,7 +55,7 @@ export class HomeComponent {
     {
       title: "Rhinofest 2024",
       address: this.CHICAGO_DRAMATISTS_ADDRESS,
-      ticketLink: '',
+      ticketLink: 'https://www.tickettailor.com/events/curioustheatrebranch/1250872',
       showtimes: [
           { date: new Date(2024, 5, 5), time: '7pm' },
           { date: new Date(2024, 5, 12), time: '7pm' },
