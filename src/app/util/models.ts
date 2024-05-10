@@ -37,5 +37,6 @@ export interface AuctionItem {
   startingBid: number,
   currentBid: number | undefined,
   bidIncrement: number,
-  images: string[]
+  images: string[],
+  chicagoOnly: boolean,
 }

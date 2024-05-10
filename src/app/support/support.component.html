@@ -6,7 +6,6 @@
       towards the stage production, and to pay the well-deserving cast and crew. Our fundraising goals are:
     </p>
 
-
     <p class="uk-text">
       <span class="uk-text-lead">$2000</span> pays for rehearsal space rentals, props, and a $100 stipend for cast and crew
     </p>
@@ -64,6 +63,7 @@
 
         <div class="uk-modal-header">
           <h3 class="uk-modal-title">{{selectedItem.title}}</h3>
+          <p *ngIf="selectedItem.chicagoOnly" class="uk-text-meta">Bids for this item are accepted only from the Chicagoland area</p>
 
           <form class="uk-grid-small" uk-grid (ngSubmit)="onSubmit()" #contactForm="ngForm">
             <input

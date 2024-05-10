@@ -31,6 +31,7 @@ export class SupportComponent {
       currentBid: undefined,
       bidIncrement: 5,
       images: [],
+      chicagoOnly: false,
     };
     minimumBid: number = 0;
 
@@ -55,7 +56,8 @@ export class SupportComponent {
             bidIncrement: 5,
             images: [
                 "assets/images/auction/brian_williams.png"
-            ]
+            ],
+            chicagoOnly: true,
         });
 
         this.auctionItems.push({
@@ -69,7 +71,8 @@ export class SupportComponent {
             bidIncrement: 5,
             images: [
                 "assets/images/auction/airpods.png"
-            ]
+            ],
+            chicagoOnly: false,
         });
 
         this.auctionItems.push({
@@ -86,7 +89,8 @@ export class SupportComponent {
                 "assets/images/auction/cake2.png",
                 "assets/images/auction/cake3.png",
                 "assets/images/auction/cake4.png",
-            ]
+            ],
+            chicagoOnly: true,
         });
 
         this.auctionItems.push({
@@ -103,7 +107,8 @@ export class SupportComponent {
             bidIncrement: 5,
             images: [
                 "assets/images/auction/script_doctor.png"
-            ]
+            ],
+            chicagoOnly: false,
         });
 
         this.auctionItems.push({
@@ -120,7 +125,8 @@ export class SupportComponent {
                 "assets/images/auction/portrait3.png",
                 "assets/images/auction/portrait4.png",
                 "assets/images/auction/portrait5.png",
-            ]
+            ],
+            chicagoOnly: true,
         });
 
         this.auctionItems.push({
@@ -139,7 +145,8 @@ export class SupportComponent {
             bidIncrement: 5,
             images: [
                 "assets/images/auction/desk.png",
-            ]
+            ],
+            chicagoOnly: true,
         });
 
         this.select(this.auctionItems[0]);
