@@ -28,3 +28,14 @@ export interface Showtime {
   date: Date,
   time: string,
 }
+
+export interface AuctionItem {
+  id: string,
+  title: string,
+  description: string,
+  descriptionMore: string | undefined,
+  startingBid: number,
+  currentBid: number | undefined,
+  bidIncrement: number,
+  images: string[]
+}
