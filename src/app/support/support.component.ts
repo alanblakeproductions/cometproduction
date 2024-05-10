@@ -32,6 +32,7 @@ export class SupportComponent {
       bidIncrement: 5,
       images: [],
     };
+    minimumBid: number = 0;
 
     model = {
       email: "",
@@ -62,7 +63,7 @@ export class SupportComponent {
             title: "AirPods with Charging Case (2nd Gen)",
             description: "<p>The famed AirPods we know and love! Bluetooth enabled and seamlessly pair with other Apple Devices to enable Siri and other integrated features.</p>" +
                          "<p>Learn more on <a href=\"https://www.apple.com/airpods-2nd-generation/\" target=\"_blank\">Apple's store page</a>.</p>",
-            descriptionMore: "Here",
+            descriptionMore: undefined,
             startingBid: 75,
             currentBid: undefined,
             bidIncrement: 5,
@@ -92,11 +93,11 @@ export class SupportComponent {
             id: "script_doctor",
             title: "Script Doctoring with Writer Alan Blake",
             description: "<p>Do you have a stage or film script and want feedback? Or are you batting around an idea for one, but need help developing an outline? Comet's writer, Alan Blake, will review your script or idea and help take it to the next level!</p>",
-            descriptionMore: "<p>Hi! I'm Alan. In addition to Comet, I've written TV, stage, and film scripts across a wide number of genres:</p>" +
-                         "I-80: An Interstate Crime Story, a dark comedy limited series<br/>" +
-                         "Diner, an action comedy feature<br/>" +
-                         "Love Me (K)not, a rom-com web series<br/>" +
-                         "The Shearing, a horror musical",
+            descriptionMore: "<p>Hi! I'm Alan. In addition to <i>Comet</i>, I've written TV, stage, and film scripts across a wide number of genres:</p>" +
+                         "<i>I-80: An Interstate Crime Story</i>, a dark comedy limited series<br/>" +
+                         "<i>Diner</i>, an action comedy feature<br/>" +
+                         "<i>Love Me (K)not</i>, a rom-com web series<br/>" +
+                         "<i>The Shearing</i>, a horror musical",
             startingBid: 30,
             currentBid: undefined,
             bidIncrement: 5,
@@ -160,6 +161,7 @@ export class SupportComponent {
       }
       this.model.bid = bid;
       this.model.itemTitle = item.title;
+      this.minimumBid = bid;
       this.message = "";
       this.state = "";
     }
