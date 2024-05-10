@@ -40,3 +40,11 @@ export interface AuctionItem {
   images: string[],
   chicagoOnly: boolean,
 }
+
+export interface DonorTier {
+  title: string,
+  image: string,
+  titleClass: string,
+  membersClass: string,
+  members: string[],
+}

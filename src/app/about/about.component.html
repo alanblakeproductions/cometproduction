@@ -21,43 +21,29 @@
         <span class="uk-text-italic">Comet</span> envisions a scenario where an event like this occurs, leaving the
         fictional members of the MPC to grapple with the choice of sharing the news with the world, or concealing it.
       </p>
-      <p class="uk-text">
-        A very sincere thank you goes to the following people for making the creation of <span class="uk-text-italic">Comet</span>
-        possible:
-      </p>
+
     </article>
 
-    <div class="uk-margin-top">
-      <h3 class="uk-heading">People</h3>
-      <ul class="uk-list">
-        <li>Dr. Federica Spoto</li>
-        <li>Dr. Matthew Payne</li>
-        <li>Mary Ruth Clarke</li>
-        <li>Cristy Salinas Lynch</li>
-        <li>Kristin L. Schoenback</li>
-        <li>Emily Anderson</li>
-        <li>Michael Serio</li>
-        <li>Dan Arisitdou</li>
-        <li>Brian Williams</li>
-      </ul>
-    </div>
+    <article class="uk-article">
+      <h1 class="uk-article-title">Supporters</h1>
+      <p class="uk-text">
+        A very sincere thank you goes to the following for making the creation of <span class="uk-text-italic">Comet</span>
+        possible:
+      </p>
 
-    <div class="uk-margin-top">
-      <h3 class="uk-heading">Groups</h3>
-      <ul class="uk-list">
-        <li>Minor Planet Center</li>
-        <li>Harvard & Smithsonian Center for Astrophysics</li>
-        <li><i>Medical Miracle</i></li>
-        <li><i>Improvised Fairytales</i></li>
-      </ul>
-    </div>
+      <div class="uk-margin-medium-top" *ngFor="let donorTier of donorTiers">
+        <h3 class="title-dark uk-heading uk-text-center uk-margin-remove-bottom uk-text-uppercase {{donorTier.titleClass}}">{{donorTier.title}}</h3>
+        <p class="uk-text-center uk-margin-remove-top uk-text-uppercase {{donorTier.membersClass}}">
+          <span class="uk-margin-right" *ngFor="let member of donorTier.members">{{member}}</span>
+        </p>
+      </div>
+    </article>
 
-    <div class="uk-margin-top">
-      <h3 class="uk-heading">Businesses</h3>
-      <ul class="uk-list">
-        <li>Ava Recycling</li>
-        <li>Massage Envy</li>
-      </ul>
+    <div class="uk-grid uk-child-width-1-3@m">
+      <div *ngFor="let entry of typeToMembers | keyvalue: returnZero">
+        <h4 class="title-dark uk-heading uk-text-uppercase uk-text-light uk-margin-top">{{entry.key}}</h4>
+        <p class="uk-margin-remove" *ngFor="let person of entry.value" [innerHTML]="person"></p>
+      </div>
     </div>
   </div>
 </div>
