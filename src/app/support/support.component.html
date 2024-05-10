@@ -116,16 +116,24 @@
           <div [innerHTML]="selectedItem.description"></div>
           <div *ngIf="selectedItem.descriptionMore !== undefined" [innerHTML]="selectedItem.descriptionMore"></div>
 
-          <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
-            <div class="uk-slideshow-items">
-              <div *ngFor="let image of selectedItem.images">
-                <img class="" src="{{image}}" alt="" uk-cover>
+          <div *ngIf="selectedItem.images.length > 1; then slideshow; else singleImage"></div>
+          <ng-template #slideshow>
+            <div class="uk-position-relative uk-dark" tabindex="-1" uk-slideshow>
+              <div class="uk-slideshow-items">
+                <div *ngFor="let image of selectedItem.images">
+                  <img class="" src="{{image}}" alt="" uk-cover>
+                </div>
               </div>
-            </div>
 
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
-          </div>
+              <a class="uk-position-center-left uk-position-small uk-hidden-hover" href uk-slidenav-previous uk-slideshow-item="previous"></a>
+              <a class="uk-position-center-right uk-position-small uk-hidden-hover" href uk-slidenav-next uk-slideshow-item="next"></a>
+            </div>
+          </ng-template>
+          <ng-template #singleImage>
+            <div class="uk-flex uk-flex-center">
+              <img src="{{selectedItem.images[0]}}" alt="{{selectedItem.title}}"/>
+            </div>
+          </ng-template>
         </div>
         <div class="uk-modal-footer uk-text-right">
         </div>
