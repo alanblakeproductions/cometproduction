@@ -48,6 +48,7 @@ export class AboutComponent {
         membersClass: "uk-text-lighter",
         members: [
           "Beth Ellen Roberts",
+          "Cody Pariset",
         ]
       });
 
