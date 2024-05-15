@@ -62,6 +62,7 @@ export class AboutComponent {
         "Michael Serio",
         "Dan Arisitdou",
         "Brian Williams",
+        "Anyata Hamilton",
       ]);
 
       this.typeToMembers.set("Groups", [
