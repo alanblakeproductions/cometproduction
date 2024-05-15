@@ -144,7 +144,10 @@ export class SupportComponent {
             currentBid: undefined,
             bidIncrement: 5,
             images: [
-                "assets/images/auction/desk.png",
+                "assets/images/auction/desk3.jpg",
+                "assets/images/auction/desk1.jpg",
+                "assets/images/auction/desk2.jpg",
+                "assets/images/auction/desk4.jpg",
             ],
             chicagoOnly: true,
         });
