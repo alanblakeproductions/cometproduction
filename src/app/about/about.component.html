@@ -33,9 +33,16 @@
 
       <div class="uk-margin-medium-top" *ngFor="let donorTier of donorTiers">
         <h3 class="title-dark uk-heading uk-text-center uk-margin-remove-bottom uk-text-uppercase {{donorTier.titleClass}}">{{donorTier.title}}</h3>
-        <p class="uk-text-center uk-margin-remove-top uk-text-uppercase {{donorTier.membersClass}}">
-          <span class="uk-margin-right" *ngFor="let member of donorTier.members">{{member}}</span>
-        </p>
+        <div class="uk-hidden@s">
+          <p class="uk-text-center uk-margin-remove uk-text-uppercase {{donorTier.membersClass}}" *ngFor="let member of donorTier.members">
+            {{member}}
+          </p>
+        </div>
+        <div class="uk-visible@s">
+          <p class="uk-text-center uk-margin-remove-top uk-text-uppercase {{donorTier.membersClass}}">
+            <span class="uk-margin-right" *ngFor="let member of donorTier.members">{{member}}</span>
+          </p>
+        </div>
       </div>
     </article>
 
