@@ -37,6 +37,7 @@ export class AboutComponent {
         members: [
           "April Totman",
           "Gregory Curtis",
+          "Kathryn Dorpinghaus",
         ]
       });
 
