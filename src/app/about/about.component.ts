@@ -50,6 +50,7 @@ export class AboutComponent {
         members: [
           "Beth Ellen Roberts",
           "Cody Pariset",
+          "Julia Wilkens",
         ]
       });
 
