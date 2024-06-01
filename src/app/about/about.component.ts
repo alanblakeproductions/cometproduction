@@ -38,6 +38,7 @@ export class AboutComponent {
           "April Totman",
           "Gregory Curtis",
           "Kathryn Dorpinghaus",
+          "Nancy Teaff",
         ]
       });
 
