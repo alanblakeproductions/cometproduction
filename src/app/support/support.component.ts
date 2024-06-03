@@ -117,7 +117,7 @@ export class SupportComponent {
             description: "<p>Comet's producer, Emmy Masteller, will do a 90-minute session of your choice located in the Chicago Area. Perfect for a couples portrait session, professional headshots, or whatever else you can dream of that she agrees to!</p>",
             descriptionMore: undefined,
             startingBid: 50,
-            currentBid: 55,
+            currentBid: 100,
             bidIncrement: 5,
             images: [
                 "assets/images/auction/portrait1.png",
