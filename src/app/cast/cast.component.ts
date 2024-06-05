@@ -18,8 +18,8 @@ export class CastComponent {
     constructor() {
       this.typeToMembers.set("Executive Team", [
           {firstName: "Alan", lastName: "Blake", roles: ["Writer"], image: "assets/images/alan_blake.jpg"},
-          {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Co-Producer"], image: "assets/images/alek_sayers.jpg"},
-          {firstName: "Emmy", lastName: "Masteller", roles: ["Co-Producer"], image: "assets/images/emmy_masteller.jpg"},
+          {firstName: "Alek", lastName: "Sayers", roles: ["Director", "Producer"], image: "assets/images/alek_sayers.jpg"},
+          {firstName: "Emmy", lastName: "Masteller", roles: ["Producer"], image: "assets/images/emmy_masteller.jpg"},
       ])
 
       this.typeToMembers.set("Cast", [
@@ -34,10 +34,10 @@ export class CastComponent {
 
       this.typeToMembers.set("Crew", [
           {firstName: "Sean", lastName: "McGinley", roles: ["Sound Design"], image: "assets/images/sean_mcginley.jpg"},
-          {firstName: "Emmy", lastName: "Masteller", roles: ["Photography"], image: "assets/images/emmy_masteller.jpg"},
-          {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: "assets/images/charlie_thomson.jpg"},
           {firstName: "Jade Magno", lastName: "McGovern", roles: ["Light Design"], image: "assets/images/jade_magno_mcgovern.jpg"},
-          {firstName: "Alan", lastName: "Blake", roles: ["Set Construction"], image: "assets/images/alan_blake.jpg"},
+          {firstName: "Charlie", lastName: "Thomson", roles: ["Graphic Design"], image: "assets/images/charlie_thomson.jpg"},
+          {firstName: "Alan", lastName: "Blake", roles: ["Set Design"], image: "assets/images/alan_blake.jpg"},
+          {firstName: "Emmy", lastName: "Masteller", roles: ["Photography"], image: "assets/images/emmy_masteller.jpg"},
       ])
     }
 
