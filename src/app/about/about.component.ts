@@ -15,6 +15,7 @@ export class AboutComponent {
 
     donorTiers: DonorTier[] = [];
     typeToMembers: Map<string, string[]> = new Map<string, string[]>();
+    resources: string[] = [];
 
     constructor() {
       // $200
@@ -79,6 +80,11 @@ export class AboutComponent {
         "Ava Recycling",
         "Massage Envy",
       ])
+
+      this.resources = [
+        '<a href="https://freesound.org/people/Akc1231/sounds/340803/">Walking on Broken Glass</a> by <a href="https://freesound.org/people/Akc1231/">Akc1231</a> | License: <a href="http://creativecommons.org/licenses/by/3.0/">Attribution 3.0</a>',
+        '<a href="https://freesound.org/people/200221-WeanBekker/sounds/543707/">Walking on glass in open hall .wav</a> by <a href="https://freesound.org/people/200221-WeanBekker/">200221-WeanBekker</a> | License: <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons 0</a>',
+      ]
     }
 
     returnZero() {
