@@ -25,6 +25,7 @@ export class AboutComponent {
         titleClass: "uk-text-bolder",
         membersClass: "uk-text-bolder",
         members: [
+          "Ati Khatri",
           "David Sayers",
         ]
       });

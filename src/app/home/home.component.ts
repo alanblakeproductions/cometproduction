@@ -13,7 +13,7 @@ import { Address, Showrun, Showtime } from './../util/models';
 })
 export class HomeComponent {
 
-  FUNDRAISING_CURRENT: number = 1194;
+  FUNDRAISING_CURRENT: number = 1394;
   FUNDRAISING_GOAL: number = 2000;
   FUNDRAISING_CURRENT_PERCENT: number = Math.floor(100 * this.FUNDRAISING_CURRENT / this.FUNDRAISING_GOAL);
 
