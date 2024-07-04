@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Address, Showrun, Showtime } from './../util/models';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     CommonModule,
+    RouterOutlet,
+    RouterLink,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
@@ -51,7 +54,6 @@ export class HomeComponent {
       description: "A variety show that is out of this world! Come for one night only to see some of Chicago's best "
         + "music and comedy. 100% of proceeds from this event will go to support the cast.",
     },
-    */
     {
       title: "Rhinofest 2024",
       address: this.CHICAGO_DRAMATISTS_ADDRESS,
@@ -66,5 +68,6 @@ export class HomeComponent {
         "Theatre Branch and Prop Thtr, the Rhino is a multi-venue showcase of new work from artists exploring all " +
         "genres of performance.",
     }
+    */
   ];
 }

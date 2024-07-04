@@ -11,9 +11,9 @@ export class LambdaService {
     var httpOptions = {
       headers: new HttpHeaders({}),
       params: new HttpParams()
-        .set("name", "Comet Production 2024 Bid!")
+        .set("name", "Comet Production 2024 Message " + model.name)
         .set("email", model.email)
-        .set("comments", "Bid for " + model.itemTitle + ": $" + model.bid)
+        .set("comments", model.comments)
     }
 
     return this.http.get("https://4w3dv080h6.execute-api.us-west-2.amazonaws.com/production/contact", httpOptions)

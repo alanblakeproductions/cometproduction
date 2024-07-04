@@ -4,7 +4,7 @@
     <h1 class="title uk-heading-large uk-margin-remove">COMET</h1>
     <p class="uk-text-lead uk-margin-remove">A One-Act Play</p>
 
-    <h3 class="title uk-heading uk-margin-large-top">DEBUTING IN CHICAGO, JUNE 2024</h3>
+    <h3 class="title uk-heading uk-margin-large-top">DEBUTED IN CHICAGO, JUNE 2024</h3>
   </div>
 </div>
 
@@ -22,6 +22,10 @@
     </p>
 
     <h2 class="uk-heading">Showtimes</h2>
+
+    <p class="uk-text" *ngIf="SHOWRUNS.length == 0">
+      There are currently no scheduled showruns of Comet. If you'd like to produce a run, please <a routerLink="../contact">contact us</a>.
+    </p>
 
     <div class="uk-card uk-card-default uk-grid" uk-grid *ngFor="let showrun of SHOWRUNS">
       <div class="uk-card-media-left uk-cover-container uk-width-2-5@s">
